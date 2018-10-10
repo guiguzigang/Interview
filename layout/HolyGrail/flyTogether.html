@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现三栏水平布局之比翼双飞布局</title>
+	<style>
+		
+		.left, .main, .right {
+			min-height:  130px;
+			float: left;
+			text-align: center;
+		}
+		.left {
+			margin-left: -100%;
+			background: green;
+			width: 200px;
+		}
+		.right {
+			margin-left: -300px;
+			background: red;
+			width: 300px;
+		}
+		.main {
+			background: blue;
+			width: 100%;
+		}
+		.content {
+			margin: 0 300px 0 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">
+			<div class="content">main</div>
+		</div>
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Flex</title>
+    <style>
+        .HolyGrail {
+		   display: flex;
+		   min-height: 100vh;
+		   flex-direction: column;
+		   background-color: #ccc;
+		   padding: 0;
+		   margin: 0;
+		}
+
+		header,
+		footer {
+		   flex: 1;
+		   background-color: #999;
+		}
+
+		.HolyGrail-body {
+		   display: flex;
+		   flex: 1;
+		}
+
+		.HolyGrail-content {
+		   flex: 1;
+		   background-color: #60f;
+		}
+
+		.HolyGrail-nav, .HolyGrail-ads {
+		   /* 两个边栏的宽度设为12em */
+		   flex: 0 0 12em;
+		   background-color: #066;
+		}
+
+		.HolyGrail-nav {
+		   /* 导航放到最左边 */
+		   order: -1;
+		}
+		@media (max-width: 768px) {
+		  	.HolyGrail-body {
+			    flex-direction: column;
+			    flex: 1;
+		  	}
+		  	.HolyGrail-nav,
+		  	.HolyGrail-ads,
+		  	.HolyGrail-content {
+		    	flex: auto;
+		  	}
+		}
+    </style>
+</head>
+<body class="HolyGrail">
+    <header>
+        #header
+    </header>
+    <div class="HolyGrail-body">
+        <main class="HolyGrail-content">
+            #center
+        </main>
+        <nav class="HolyGrail-nav">
+            #left
+        </nav>
+        <aside class="HolyGrail-ads">
+            #right
+        </aside>
+    </div>
+    <footer>
+        #footer
+    </footer>
+</body>
+</html>

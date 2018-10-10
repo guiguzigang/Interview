@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现三栏水平布局之绝对定位布局</title>
+	<style>
+		.container {
+			position: relative;
+		}
+		.left, .main, .right {
+			top: 0;
+			height:  130px;
+		}
+		.left {
+			position: absolute;
+			left: 0px;
+			background: green;
+			width: 200px;
+		}
+		.right {
+			position: absolute;
+			right: 0px;
+			background: red;
+			width: 300px;
+		}
+		.main {
+			background: blue;
+			margin: 0 300px 0 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">main</div>
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>

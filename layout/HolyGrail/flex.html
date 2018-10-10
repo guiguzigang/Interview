@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现三栏水平布局之FLEX布局</title>
+	<style>
+		.container {
+			display: flex;
+			min-height: 130px;
+		}
+		.left, .main, .right {
+			position: relative;
+			min-height:  130px;
+			float: left;
+		}
+		.left {
+			order: -1;
+			background: green;
+			flex-basis: 200px;
+		}
+		.right {
+			background: red;
+			flex-basis: 300px;
+		}
+		.main {
+			flex-grow: 1;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">main</div>
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>
